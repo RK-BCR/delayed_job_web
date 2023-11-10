@@ -12,6 +12,12 @@
         <form action="<%= u("reload/#{job.id}") %>" method="post"><%= csrf_token_tag %><input type="submit" value="Reload"></input></form>
       </div>
     </dd>
+    <% if job.account_id %>
+      <dt>Account ID</dt>
+      <dd>
+        <%=h job.account_id %>
+      </dd>
+    <% end %>
     <dt>Priority</dt>
     <dd><%=h job.priority %></dd>
     <dt>Attempts</dt>
